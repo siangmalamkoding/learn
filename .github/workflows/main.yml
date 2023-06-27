@@ -11,8 +11,8 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
-      - name: Install dependencies for unit tests
-        run: composer install --dev
+      - name: 🧪 Run Unit Tests
+        run: vendor/bin/phpunit
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
