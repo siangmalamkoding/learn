@@ -13,9 +13,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Install dependenvies
-        run: composer install
-
       - name: 🧪 Run Unit Tests
         run: vendor/bin/phpunit
 
