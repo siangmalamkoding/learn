@@ -20,7 +20,3 @@ Route::get('/', function () {
 Route::get('/protected', function () {
     return 'protected branch';
 });
-
-Route::get('/new', function () {
-    return 'new settings';
-});
