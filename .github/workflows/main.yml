@@ -13,8 +13,11 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Install dependencies for unit tests
-        run: composer install --no-dev
+      - name: Clear Composer cache
+        run: composer clear-cache
+
+      - name: Install dependencies
+        run: composer install
 
       - name: 🧪 Run Unit Tests
         run: vendor/bin/phpunit
