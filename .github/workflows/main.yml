@@ -13,6 +13,12 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
+      - name: Install dependencies for unit tests
+        run: composer install --no-dev
+
+      - name: 🧪 Run Unit Tests
+        run: vendor/bin/phpunit
+
       - name: 📂 Sync files
         if: ${{ success() }}
         uses: Penguibird/FTP-Deploy-Action@4.2.0
