@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/world', function () {
-    return 'hi';
+Route::get('/protected', function () {
+    return 'protected branch';
 });
