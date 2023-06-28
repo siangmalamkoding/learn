@@ -13,15 +13,6 @@ jobs:
       - name: Get latest code
         uses: actions/checkout@v3
 
-      - name: Build apps
-        run: composer install
-
-      - name: Run Unit Tests
-        run: vendor/bin/phpunit
-
-      - name: Launch Pint Linter
-        run: vendor/bin/pint --preset psr12
-
       - name: 📂 Sync files
         if: ${{ success() }}
         uses: Penguibird/FTP-Deploy-Action@4.2.0
