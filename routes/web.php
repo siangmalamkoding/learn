@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/protected', function () {
     return 'protected branch';
 });
+
+Route::get('/amazing', function () {
+    return 'amazing';
+});
