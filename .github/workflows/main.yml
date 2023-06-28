@@ -21,3 +21,11 @@ jobs:
 
       - name: Launch Pint Linter
         run: vendor/bin/pint --preset psr12
+
+      - name: 📂 Sync files
+        if: ${{ success() }}
+        uses: Penguibird/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
