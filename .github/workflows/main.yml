@@ -18,3 +18,6 @@ jobs:
 
       - name: 🧪 Run Unit Tests
         run: vendor/bin/phpunit
+
+      - name: Launch Pint inspection
+        run: vendor/bin/pint --preset psr12
